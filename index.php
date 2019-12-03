@@ -62,11 +62,13 @@ $json=file_get_contents($url);
 $data=json_decode($json,true);
 
 
-
+echo $_POST["location"];
 echo '<table>';
 foreach($data['list'] as $index => $value) {
  
- $day = date('D',$value[dt]);
+ $day = date('l',$value[dt]);
+ 
+
  echo '<tr>';
   echo  '<td>' . "Max temperature for " . $day . " will be " . $value[temp][max] . "°C" . '</td>' ;
   echo '</tr>';
