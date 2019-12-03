@@ -62,7 +62,7 @@ $json=file_get_contents($url);
 $data=json_decode($json,true);
 
 
-echo $_POST["location"];
+echo  " <p id=\"poo\"> The weather in " . $_POST["location"] . " next days: </p> ";
 echo '<table>';
 foreach($data['list'] as $index => $value) {
  
